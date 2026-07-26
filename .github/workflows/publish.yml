@@ -34,9 +34,15 @@ jobs:
           GH_TOKEN: ${{ secrets.COGNITYX_DOCS_READ_TOKEN }}
         run: |
           mkdir -p .sources
-          for repo in cognityx-core cognityx-inference cognityx-training cognityx-storage; do
-            git clone --depth 1 "https://x-access-token:${GH_TOKEN}@github.com/cognityx/${repo}.git" ".sources/${repo#cognityx-}" || true
+          for repo in cognityx-core cognityx-training cognityx-storage; do
+            slug="${repo#cognityx-}"
+            git -c "http.extraheader=AUTHORIZATION: bearer ${GH_TOKEN}" \
+              clone --depth 1 "https://github.com/cognityx/${repo}.git" ".sources/${slug}"
           done
+          if ! git -c "http.extraheader=AUTHORIZATION: bearer ${GH_TOKEN}" \
+            clone --depth 1 "https://github.com/cognityx/cognityx-inference.git" .sources/inference; then
+            rm -rf .sources/inference
+          fi
 
       - name: Build portal
         run: mkdocs build --strict --site-dir .build/portal
