@@ -65,7 +65,9 @@ jobs:
         run: |
           for component in core inference training storage; do
             if [ -f ".sources/${component}/mkdocs.yml" ]; then
-              mkdocs build --strict --config-file ".sources/${component}/mkdocs.yml" --site-dir ".build/components/${component}"
+              mkdocs build --strict \
+                --config-file ".sources/${component}/mkdocs.yml" \
+                --site-dir "${GITHUB_WORKSPACE}/.build/components/${component}"
             fi
           done
 
