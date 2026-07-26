@@ -38,5 +38,13 @@
     "prefix": "jobs",
     "summary": "Durable background jobs, ownership boundaries, cancellation, and replayable progress events.",
     "contact": "bhujay.bhatta@yahoo.com"
+  },
+  {
+    "slug": "ingest",
+    "title": "Cognityx Ingest",
+    "repo": "cognityx/cognityx-ingest",
+    "prefix": "ingest",
+    "summary": "Canonical, provenance-preserving PDF ingestion artifacts.",
+    "contact": "bhujay.bhatta@yahoo.com"
   }
 ]

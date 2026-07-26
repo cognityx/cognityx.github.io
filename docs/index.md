@@ -24,3 +24,4 @@ those component sites without copying their source documentation.
 | [Training](components/training.md) | Reproducible training and evaluation workflows |
 | [Storage](components/storage.md) | Logical storage operations independent of the backend |
 | [Jobs](components/jobs.md) | Durable background jobs and replayable progress events |
+| [Ingest](components/ingest.md) | Canonical PDF ingestion with source and page provenance |

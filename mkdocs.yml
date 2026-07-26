@@ -38,4 +38,5 @@ nav:
       - Training: components/training.md
       - Storage: components/storage.md
       - Jobs: components/jobs.md
+      - Ingest: components/ingest.md
   - Development: development.md

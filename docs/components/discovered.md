@@ -43,3 +43,11 @@ Durable background jobs, ownership boundaries, cancellation, and replayable prog
 - [Open documentation](/jobs/)
 - [Source repository (access required)](https://github.com/cognityx/cognityx-jobs)
 - [Request repository access](mailto:bhujay.bhatta@yahoo.com?subject=Access%20request%20for%20cognityx/cognityx-jobs)
+
+## Cognityx Ingest
+
+Canonical, provenance-preserving PDF ingestion artifacts.
+
+- [Open documentation](/ingest/)
+- [Source repository (access required)](https://github.com/cognityx/cognityx-ingest)
+- [Request repository access](mailto:bhujay.bhatta@yahoo.com?subject=Access%20request%20for%20cognityx/cognityx-ingest)
