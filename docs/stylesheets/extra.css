@@ -1,0 +1,18 @@
+:root {
+  --cognityx-ink: #132238;
+  --cognityx-sand: #f7f3ea;
+  --cognityx-gold: #e6a83b;
+}
+
+.portal-hero {
+  background: linear-gradient(135deg, var(--cognityx-ink), #31536b);
+  border-radius: 1rem;
+  color: white;
+  margin: 1rem 0 2rem;
+  padding: clamp(2rem, 7vw, 5rem);
+}
+
+.portal-hero h1 { color: white; font-size: clamp(2.4rem, 7vw, 5rem); }
+.portal-hero a { margin-right: .5rem; }
+.md-button--primary { background-color: var(--cognityx-gold); border-color: var(--cognityx-gold); color: var(--cognityx-ink); }
+.md-main { background: var(--cognityx-sand); }

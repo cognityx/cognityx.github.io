@@ -1,0 +1,39 @@
+site_name: Cognityx Documentation
+site_description: Unified public documentation for the Cognityx platform.
+site_url: https://cognityx.github.io/
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: blue grey
+      accent: amber
+plugins:
+  - search
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+extra_css:
+  - stylesheets/extra.css
+strict: true
+nav:
+  - Home: index.md
+  - Getting started: getting-started.md
+  - Architecture: architecture.md
+  - Components:
+      - Overview: components/index.md
+      - Core: components/core.md
+      - Inference: components/inference.md
+      - Training: components/training.md
+      - Storage: components/storage.md
+  - Development: development.md

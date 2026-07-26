@@ -1,0 +1,31 @@
+[
+  {
+    "slug": "core",
+    "title": "Cognityx Core",
+    "repo": "cognityx/cognityx-core",
+    "prefix": "core",
+    "summary": "Shared backend contracts, configuration, factories, and publication boundaries."
+  },
+  {
+    "slug": "inference",
+    "title": "Cognityx Inference",
+    "repo": "cognityx/cognityx-inference",
+    "prefix": "inference",
+    "summary": "Inference serving and model lifecycle documentation.",
+    "optional": true
+  },
+  {
+    "slug": "training",
+    "title": "Cognityx Training",
+    "repo": "cognityx/cognityx-training",
+    "prefix": "training",
+    "summary": "Training workflows, configuration, evaluation, and tuning."
+  },
+  {
+    "slug": "storage",
+    "title": "Cognityx Storage",
+    "repo": "cognityx/cognityx-storage",
+    "prefix": "storage",
+    "summary": "Provider-neutral storage operations and local backend boundaries."
+  }
+]
