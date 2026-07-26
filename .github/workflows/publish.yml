@@ -3,6 +3,10 @@ name: Publish documentation
 on:
   push:
     branches: [main]
+  repository_dispatch:
+    types: [documentation-updated]
+  schedule:
+    - cron: "17 */2 * * *"
   workflow_dispatch:
 
 permissions:
@@ -29,50 +33,33 @@ jobs:
       - name: Install portal dependencies
         run: pip install -r requirements.txt
 
-      - name: Check out Core documentation
-        uses: actions/checkout@v4
-        with:
-          repository: cognityx/cognityx-core
-          token: ${{ secrets.COGNITYX_DOCS_READ_TOKEN }}
-          path: .sources/core
-
-      - name: Check out Training documentation
-        uses: actions/checkout@v4
-        with:
-          repository: cognityx/cognityx-training
-          token: ${{ secrets.COGNITYX_DOCS_READ_TOKEN }}
-          path: .sources/training
-
-      - name: Check out Storage documentation
-        uses: actions/checkout@v4
-        with:
-          repository: cognityx/cognityx-storage
-          token: ${{ secrets.COGNITYX_DOCS_READ_TOKEN }}
-          path: .sources/storage
-
-      - name: Check out Inference documentation
-        continue-on-error: true
-        uses: actions/checkout@v4
-        with:
-          repository: cognityx/cognityx-inference
-          token: ${{ secrets.COGNITYX_DOCS_READ_TOKEN }}
-          path: .sources/inference
+      - name: Discover documentation repositories
+        env:
+          GH_TOKEN: ${{ secrets.COGNITYX_DOCS_READ_TOKEN }}
+        run: |
+          python3 scripts/discover_components.py \
+            --organization cognityx \
+            --overrides components.json \
+            --sources-root .sources \
+            --output .build/components.json \
+            --directory-page docs/components/discovered.md
 
       - name: Build portal
         run: mkdocs build --strict --site-dir .build/portal
 
       - name: Build component sites
-        run: |
-          for component in core inference training storage; do
-            if [ -f ".sources/${component}/mkdocs.yml" ]; then
-              mkdocs build --strict \
-                --config-file ".sources/${component}/mkdocs.yml" \
-                --site-dir "${GITHUB_WORKSPACE}/.build/components/${component}"
-            fi
-          done
+        run: python3 scripts/build_components.py --manifest .build/components.json --output-root .build/components
 
       - name: Assemble portal
-        run: python3 scripts/build_portal.py --portal-site .build/portal --components-root .build/components --output site
+        run: |
+          python3 scripts/build_portal.py \
+            --portal-site .build/portal \
+            --components-root .build/components \
+            --manifest .build/components.json \
+            --output site
+
+      - name: Check internal links
+        run: python3 scripts/check_links.py site
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

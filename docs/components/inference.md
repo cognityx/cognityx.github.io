@@ -3,7 +3,8 @@
 Inference serving and model lifecycle capabilities for the platform.
 
 - [Open generated Inference documentation](/inference/)
-- [Open the Inference source repository](https://github.com/cognityx/cognityx-inference)
+- [Source repository (access required)](https://github.com/cognityx/llm-benchmark)
+- [Request repository access](mailto:bhujay.bhatta@yahoo.com?subject=Access%20request%20for%20cognityx%2Fllm-benchmark)
 
-The portal treats this component as optional until its private repository is
-available to the publishing workflow.
+The Cognityx Inference package is currently hosted in the repository named
+`llm-benchmark`.

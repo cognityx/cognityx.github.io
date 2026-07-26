@@ -23,3 +23,4 @@ those component sites without copying their source documentation.
 | [Inference](components/inference.md) | Model serving and inference operations |
 | [Training](components/training.md) | Reproducible training and evaluation workflows |
 | [Storage](components/storage.md) | Logical storage operations independent of the backend |
+| [Jobs](components/jobs.md) | Durable background jobs and replayable progress events |

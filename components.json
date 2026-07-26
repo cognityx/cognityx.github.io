@@ -4,28 +4,39 @@
     "title": "Cognityx Core",
     "repo": "cognityx/cognityx-core",
     "prefix": "core",
-    "summary": "Shared backend contracts, configuration, factories, and publication boundaries."
+    "summary": "Shared backend contracts, configuration, factories, and publication boundaries.",
+    "contact": "bhujay.bhatta@yahoo.com"
   },
   {
     "slug": "inference",
     "title": "Cognityx Inference",
-    "repo": "cognityx/cognityx-inference",
+    "repo": "cognityx/llm-benchmark",
     "prefix": "inference",
-    "summary": "Inference serving and model lifecycle documentation.",
-    "optional": true
+    "summary": "Inference serving, model lifecycle, and hardware-boundary evaluation. The repository is currently named llm-benchmark.",
+    "contact": "bhujay.bhatta@yahoo.com"
   },
   {
     "slug": "training",
     "title": "Cognityx Training",
     "repo": "cognityx/cognityx-training",
     "prefix": "training",
-    "summary": "Training workflows, configuration, evaluation, and tuning."
+    "summary": "Training workflows, configuration, evaluation, and tuning.",
+    "contact": "bhujay.bhatta@yahoo.com"
   },
   {
     "slug": "storage",
     "title": "Cognityx Storage",
     "repo": "cognityx/cognityx-storage",
     "prefix": "storage",
-    "summary": "Provider-neutral storage operations and local backend boundaries."
+    "summary": "Provider-neutral storage operations and local backend boundaries.",
+    "contact": "bhujay.bhatta@yahoo.com"
+  },
+  {
+    "slug": "jobs",
+    "title": "Cognityx Jobs",
+    "repo": "cognityx/cognityx-jobs",
+    "prefix": "jobs",
+    "summary": "Durable background jobs, ownership boundaries, cancellation, and replayable progress events.",
+    "contact": "bhujay.bhatta@yahoo.com"
   }
 ]

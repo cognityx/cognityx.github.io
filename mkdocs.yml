@@ -32,8 +32,10 @@ nav:
   - Architecture: architecture.md
   - Components:
       - Overview: components/index.md
+      - All components: components/discovered.md
       - Core: components/core.md
       - Inference: components/inference.md
       - Training: components/training.md
       - Storage: components/storage.md
+      - Jobs: components/jobs.md
   - Development: development.md
