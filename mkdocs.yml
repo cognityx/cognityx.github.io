@@ -39,4 +39,5 @@ nav:
       - Storage: components/storage.md
       - Jobs: components/jobs.md
       - Ingest: components/ingest.md
+      - Resource: components/resource.md
   - Development: development.md

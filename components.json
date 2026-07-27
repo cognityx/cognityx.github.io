@@ -46,5 +46,13 @@
     "prefix": "ingest",
     "summary": "Canonical, provenance-preserving PDF ingestion artifacts.",
     "contact": "bhujay.bhatta@yahoo.com"
+  },
+  {
+    "slug": "resource",
+    "title": "Cognityx Resource",
+    "repo": "cognityx/cognityx-resource",
+    "prefix": "resource",
+    "summary": "Shared resource context, execution identity, Context IDs, and portable cross-service references.",
+    "contact": "bhujay.bhatta@yahoo.com"
   }
 ]

@@ -25,3 +25,4 @@ those component sites without copying their source documentation.
 | [Storage](components/storage.md) | Logical storage operations independent of the backend |
 | [Jobs](components/jobs.md) | Durable background jobs and replayable progress events |
 | [Ingest](components/ingest.md) | Canonical PDF ingestion with source and page provenance |
+| [Resource](components/resource.md) | Shared resource Context and cross-service reference values |

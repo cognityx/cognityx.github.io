@@ -16,4 +16,5 @@ replace component-specific setup or release processes.
 - [Storage](components/storage.md)
 - [Jobs](components/jobs.md)
 - [Ingest](components/ingest.md)
+- [Resource](components/resource.md)
 - [All discovered components](components/discovered.md)
