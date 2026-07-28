@@ -54,5 +54,13 @@
     "prefix": "resource",
     "summary": "Shared resource context, execution identity, Context IDs, and portable cross-service references.",
     "contact": "bhujay.bhatta@yahoo.com"
+  },
+  {
+    "slug": "sdk",
+    "title": "Cognityx Python SDK",
+    "repo": "cognityx/cognityx-sdk",
+    "prefix": "sdk",
+    "summary": "The primary application-facing Python SDK and thin Cogni facade.",
+    "contact": "bhujay.bhatta@yahoo.com"
   }
 ]
