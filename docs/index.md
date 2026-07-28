@@ -26,4 +26,4 @@ those component sites without copying their source documentation.
 | [Jobs](components/jobs.md) | Durable background jobs and replayable progress events |
 | [Ingest](components/ingest.md) | Canonical PDF ingestion with source and page provenance |
 | [Resource](components/resource.md) | Shared resource Context and cross-service reference values |
-| [Python SDK](components/sdk.md) | Thin application-facing `Cogni` facade over Cognityx components |
+| [Python SDK](components/sdk.md) | `Cogni` Python facade, unified `cogni` CLI, lifecycle operations, and safe Blob cleanup |
