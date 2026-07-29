@@ -10,9 +10,9 @@
   {
     "slug": "inference",
     "title": "Cognityx Inference",
-    "repo": "cognityx/llm-benchmark",
+    "repo": "cognityx/cognityx-inference",
     "prefix": "inference",
-    "summary": "Inference serving, model lifecycle, and hardware-boundary evaluation. The repository is currently named llm-benchmark.",
+    "summary": "Inference serving, model lifecycle, commercial-provider routing, and hardware-boundary evaluation.",
     "contact": "bhujay.bhatta@yahoo.com"
   },
   {

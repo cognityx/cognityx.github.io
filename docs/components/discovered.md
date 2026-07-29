@@ -14,11 +14,11 @@ Shared backend contracts, configuration, factories, and publication boundaries.
 
 ## Cognityx Inference
 
-Inference serving, model lifecycle, and hardware-boundary evaluation. The repository is currently named llm-benchmark.
+Inference serving, model lifecycle, commercial-provider routing, and hardware-boundary evaluation.
 
 - [Open documentation](/inference/)
-- [Source repository (access required)](https://github.com/cognityx/llm-benchmark)
-- [Request repository access](mailto:bhujay.bhatta@yahoo.com?subject=Access%20request%20for%20cognityx/llm-benchmark)
+- [Source repository (access required)](https://github.com/cognityx/cognityx-inference)
+- [Request repository access](mailto:bhujay.bhatta@yahoo.com?subject=Access%20request%20for%20cognityx/cognityx-inference)
 
 ## Cognityx Training
 
@@ -51,3 +51,27 @@ Canonical, provenance-preserving PDF ingestion artifacts.
 - [Open documentation](/ingest/)
 - [Source repository (access required)](https://github.com/cognityx/cognityx-ingest)
 - [Request repository access](mailto:bhujay.bhatta@yahoo.com?subject=Access%20request%20for%20cognityx/cognityx-ingest)
+
+## Cognityx Resource
+
+Shared resource context, execution identity, Context IDs, and portable cross-service references.
+
+- [Open documentation](/resource/)
+- [Source repository (access required)](https://github.com/cognityx/cognityx-resource)
+- [Request repository access](mailto:bhujay.bhatta@yahoo.com?subject=Access%20request%20for%20cognityx/cognityx-resource)
+
+## Cognityx Python SDK
+
+The primary application-facing Python SDK and thin Cogni facade.
+
+- [Open documentation](/sdk/)
+- [Source repository (access required)](https://github.com/cognityx/cognityx-sdk)
+- [Request repository access](mailto:bhujay.bhatta@yahoo.com?subject=Access%20request%20for%20cognityx/cognityx-sdk)
+
+## Cognityx Dataforge
+
+Generated documentation for cognityx-dataforge.
+
+- [Open documentation](/dataforge/)
+- [Source repository (access required)](https://github.com/cognityx/cognityx-dataforge)
+- [Request repository access](mailto:bhujay.bhatta@yahoo.com?subject=Access%20request%20for%20cognityx/cognityx-dataforge)
