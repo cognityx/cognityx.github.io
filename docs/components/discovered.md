@@ -14,11 +14,11 @@ Shared backend contracts, configuration, factories, and publication boundaries.
 
 ## Cognityx Inference
 
-Inference serving, model lifecycle, and hardware-boundary evaluation. The repository is currently named llm-benchmark.
+Inference serving, model lifecycle, commercial-provider routing, and hardware-boundary evaluation.
 
 - [Open documentation](/inference/)
-- [Source repository (access required)](https://github.com/cognityx/llm-benchmark)
-- [Request repository access](mailto:bhujay.bhatta@yahoo.com?subject=Access%20request%20for%20cognityx/llm-benchmark)
+- [Source repository (access required)](https://github.com/cognityx/cognityx-inference)
+- [Request repository access](mailto:bhujay.bhatta@yahoo.com?subject=Access%20request%20for%20cognityx/cognityx-inference)
 
 ## Cognityx Training
 
