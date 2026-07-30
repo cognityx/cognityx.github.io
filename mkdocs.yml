@@ -33,12 +33,12 @@ nav:
   - Components:
       - Overview: components/index.md
       - All components: components/discovered.md
-      - Core: components/core.md
-      - Inference: components/inference.md
-      - Training: components/training.md
       - Storage: components/storage.md
-      - Jobs: components/jobs.md
-      - Ingest: components/ingest.md
+      - Jobs: components/jobs.md      
       - Resource: components/resource.md
+      - Inference: components/inference.md
+      - Ingest: components/ingest.md      
+      - DataForge: components/dataforge.md     
+      - Training: components/training.md   
       - Python SDK: components/sdk.md
   - Development: development.md
