@@ -24,6 +24,14 @@
     "contact": "bhujay.bhatta@yahoo.com"
   },
   {
+    "slug": "dataforge",
+    "title": "Cognityx DataForge",
+    "repo": "cognityx/cognityx-dataforge",
+    "prefix": "dataforge",
+    "summary": "Preparing data for training",
+    "contact": "bhujay.bhatta@yahoo.com"
+  },
+  {
     "slug": "storage",
     "title": "Cognityx Storage",
     "repo": "cognityx/cognityx-storage",
