@@ -28,7 +28,7 @@
     "title": "Cognityx DataForge",
     "repo": "cognityx/cognityx-dataforge",
     "prefix": "dataforge",
-    "summary": "Preparing data for training",
+    "summary": "Turns ingested document evidence into datasets for training and evaluation.",
     "contact": "bhujay.bhatta@yahoo.com"
   },
   {
@@ -52,7 +52,7 @@
     "title": "Cognityx Ingest",
     "repo": "cognityx/cognityx-ingest",
     "prefix": "ingest",
-    "summary": "Canonical, provenance-preserving PDF ingestion artifacts.",
+    "summary": "Registers source files, builds document-level pages and artifacts, and hands stable IDs to downstream analysis.",
     "contact": "bhujay.bhatta@yahoo.com"
   },
   {
@@ -68,7 +68,7 @@
     "title": "Cognityx Python SDK",
     "repo": "cognityx/cognityx-sdk",
     "prefix": "sdk",
-    "summary": "The primary application-facing Python SDK and thin Cogni facade.",
+    "summary": "Primary SDK and `cogni` CLI for bundles, source files, ingest jobs, and document/artifact inspection.",
     "contact": "bhujay.bhatta@yahoo.com"
   }
 ]
