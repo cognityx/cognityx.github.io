@@ -13,5 +13,11 @@ After an ingest run finishes:
 DataForge avoids technical setup for storage locations, and uses the same
 identifier-based handoff used by ingest jobs.
 
+Preferred ingest handoff for DataForge:
+
+- Start from `document.json`, `evidence.jsonl`, and `provenance.json` URIs.
+- Use `provenance.json` as the canonical provenance contract.
+- Do not reopen the raw source PDF to reconstruct section, page, or anchor provenance.
+
 - [DataForge documentation](/dataforge/)
 - [Source repository](https://github.com/cognityx/cognityx-dataforge)
