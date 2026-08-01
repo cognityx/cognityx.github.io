@@ -3,11 +3,11 @@
 Public documentation assembly site for the Cognityx platform.
 
 This repository owns the portal landing pages, shared navigation, and GitHub
-Pages workflow. Component repositories remain the source of truth for their
-own documentation and are built into stable paths under `/core/`,
-`/inference/`, `/training/`, `/storage/`, and `/jobs/`. Repositories added to
-the Cognityx organization are discovered automatically when they contain a
-root `mkdocs.yml`.
+Pages workflow. Component repositories remain the source of truth for their own
+documentation and are built into stable paths under `/core/`, `/inference/`,
+`/training/`, `/storage/`, `/jobs/`, `/ingest/`, and `/dataforge/`.
+Repositories added to the Cognityx organization are discovered automatically when
+they contain a root `mkdocs.yml`.
 
 ## Local build
 
