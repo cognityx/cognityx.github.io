@@ -1,45 +1,70 @@
 # Cognityx Ingest
 
-This component turns source files into structured evidence that teams can use downstream.
-It keeps a stable record of the original file (called a SourceAsset, the original
-uploaded document) and then builds page-level document data from it.
+Cognityx Ingest turns an original file into structured, traceable evidence. It
+registers the original as a stable SourceAsset, runs document parsing, preserves
+the parser's native result, and publishes document artifacts that downstream
+programs can inspect without reopening the file.
 
-It is the handoff point for DataForge:
+## Where It Fits
 
-- `cogni ingest /path/to/file.pdf` for new local files.
-- `cogni ingest --asset <asset_id>` for existing SourceAsset reuse.
-- `cogni ingest --bundle-id <bundle_id>` for bundle-level reruns.
+```text
+cogni
+  -> SourceAsset / DocBundle
+  -> IngestRun + Job
+  -> Document
+  -> Canonical Content
+  -> Source Graph + Provenance Addresses
+  -> DataForge
+```
 
-The generated output includes stable document and artifact references for
-inspection and reruns. Page-level evidence is retained for review and quality checks.
-Typical ingest handoff outputs include:
+A SourceAsset is the stable logical record of an original file, while a
+DocBundle is an optional logical grouping. An IngestRun records one execution
+over one or more sources. Its Job is durable progress and cancellation history,
+not document content. Each successful source result has a stable Document ID and
+generated artifacts.
 
-- `document.json`
-- `evidence.jsonl`
-- `provenance.json`
-- `manifest.json`
-- `ingest/runs/<run-id>/manifest.json`
-- optional `parser/<backend>.json`
+Use the Python SDK or `cogni` command line for normal work:
 
-Logical URIs are returned as `storage://` references, for example:
+```bash
+cogni ingest <path>
+cogni ingest --asset <asset-id>
+cogni ingest --bundle <bundle-path>
+cogni job watch <job-id>
+cogni document show <document-id>
+cogni artifact available <document-id>
+cogni artifact read <document-id> provenance
+cogni provenance resolve <document-id> <address-id>
+```
 
-`storage://<profile>/artifacts/ingest/documents/<document-id>/provenance.json`
+The generated document surface has exactly nine public artifact names:
+`document`, `evidence`, `provenance`, `manifest`, `canonical-content`,
+`source-graph`, `provenance-addresses`, `parser-observations`, and
+`parser-fusion-decisions`. Artifact reads are authorized by Ingest; Storage owns
+the physical bytes behind their logical `storage://` locations.
 
-Physical file locations are backend-specific and are only used for local support,
-never as the API contract.
+`document.json` is the v2 compatibility representation.
+`canonical-content.json` is the current v3.2 parser-neutral source model. The
+Source Graph is derived from validated canonical source facts and intentionally
+contains no second copy of canonical text. It is a provenance structure, not a
+semantic knowledge graph.
 
-Deletion and cleanup:
+The run manifest hands DataForge logical references to provenance, canonical
+content, the Source Graph, and provenance addresses. DataForge then owns derived
+paragraph Q/A and composite Knowledge Units; Ingest does not generate a semantic
+knowledge graph.
 
-- Deleting an ingestion unit keeps metadata visible for traceability.
-- Physical file cleanup is performed by Storage, which removes unreferenced blobs in
-  a background process with safety checks.
+Deletion separates logical records from physical bytes. Asset and bundle
+deletion is a recoverable logical change. Run and document deletion affects only
+their stated generated scope. `cogni cleanup blobs` plans physical cleanup by
+default, and `--yes` executes a fresh Storage-owned plan only after live-reference
+and safety checks. Cleanup is explicit, not an always-running background service.
 
-Deferred roadmap:
+The complete schema hierarchy, important record fields, six provenance outcomes,
+DataForge handoff, and delete map are maintained by Ingest:
 
-- Reference-only external URI ingestion is intentionally deferred.
-- Fully distributed worker scheduling is intentionally deferred.
-
-- [Open generated Ingest documentation](/ingest/)
-- [Command handoff contract](/sdk/#cli-output-and-handoff-guide)
+- [Open the Ingest schema and object map](/ingest/schema-map/)
+- [Open all generated Ingest documentation](/ingest/)
+- [Open the SDK documentation](/sdk/)
+- [Open the SDK command guide](/sdk/cli/)
 - [Source repository (access required)](https://github.com/cognityx/cognityx-ingest)
 - [Request repository access](mailto:bhujay.bhatta@yahoo.com?subject=Access%20request%20for%20cognityx%2Fcognityx-ingest)

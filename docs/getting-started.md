@@ -18,7 +18,7 @@ and development instructions. The portal is an assembly layer; it does not
 replace component-specific setup or release processes.
 
 For exact command handoff details (run IDs, artifact URIs, and deletion effects),
-use [CLI output and handoff guide](components/sdk.md#cli-output-and-handoff-guide).
+use the generated [SDK command guide](/sdk/cli/).
 
 ## Minimal working command flow
 
