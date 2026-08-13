@@ -29,6 +29,8 @@ strict: true
 nav:
   - Home: index.md
   - Getting started: getting-started.md
+  - Configuration: configuration.md
+  - Command line: cli.md
   - Architecture: architecture.md
   - Components:
       - Overview: components/index.md
@@ -40,5 +42,6 @@ nav:
       - Ingest: components/ingest.md      
       - DataForge: components/dataforge.md     
       - Training: components/training.md   
+      - Experiments: components/experiments.md
       - Python SDK: components/sdk.md
   - Development: development.md

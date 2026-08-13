@@ -24,6 +24,14 @@
     "contact": "bhujay.bhatta@yahoo.com"
   },
   {
+    "slug": "experiments",
+    "title": "Cognityx Experiments",
+    "repo": "cognityx/cognityx-experiments",
+    "prefix": "experiments",
+    "summary": "Freezes research plans, coordinates owning services, and accumulates reviewable evidence without duplicating their execution logic.",
+    "contact": "bhujay.bhatta@yahoo.com"
+  },
+  {
     "slug": "dataforge",
     "title": "Cognityx DataForge",
     "repo": "cognityx/cognityx-dataforge",
