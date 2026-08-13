@@ -18,7 +18,32 @@ and development instructions. The portal is an assembly layer; it does not
 replace component-specific setup or release processes.
 
 For exact command handoff details (run IDs, artifact URIs, and deletion effects),
-use the generated [SDK command guide](/sdk/cli/).
+use the generated [SDK command guide](/sdk/cli/). Before starting work, the
+portal [configuration guide](configuration.md) explains how to inspect the
+effective settings without opening Storage, starting a job, or loading a model.
+
+## Check settings before execution
+
+The SDK combines several independently owned settings domains. This command
+shows each one separately; it does not claim that Cognityx has one global
+configuration file:
+
+```bash
+cogni config show --component all
+cogni config validate --component all
+```
+
+For research and model work, keep the scientific recipe explicit and use the
+owning component's static command. For example:
+
+```bash
+cognityx-dataforge config validate --config dataforge.toml
+cognityx-train config validate --config training.toml
+cognityx-inference config validate
+```
+
+See the [complete command-line map](cli.md) for every implemented form and the
+specialized inputs that deliberately remain explicit.
 
 ## Minimal working command flow
 
@@ -61,6 +86,7 @@ Roadmap and intentionally deferred work:
 - [Core](components/core.md)
 - [Inference](components/inference.md)
 - [Training](components/training.md)
+- [Experiments](components/experiments.md)
 - [Storage](components/storage.md)
 - [Jobs](components/jobs.md)
 - [Ingest](components/ingest.md)

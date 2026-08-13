@@ -6,6 +6,7 @@ Build capable AI systems by following a clear flow from source files to model-re
 
 [Explore the platform](components/index.md){ .md-button .md-button--primary }
 [Get started](getting-started.md){ .md-button }
+[Inspect configuration](configuration.md){ .md-button }
 
 </div>
 
@@ -27,6 +28,10 @@ Typical platform flow:
 - Feed curated pages to DataForge.
 - Move curated sets to training and inference evaluation.
 
+Before a run, use the [configuration guide](configuration.md) to see which
+settings files were actually loaded. Use the [command-line map](cli.md) to find
+the static inspection command owned by each component.
+
 ## Platform areas
 
 | Area | Purpose |
@@ -34,6 +39,7 @@ Typical platform flow:
 | [Core](components/core.md) | Shared contracts and backend integration boundaries |
 | [Inference](components/inference.md) | Model serving and inference operations |
 | [Training](components/training.md) | Reproducible training and evaluation workflows |
+| [Experiments](components/experiments.md) | Freezes a research plan and coordinates the owning services |
 | [Storage](components/storage.md) | Logical storage operations independent of the backend |
 | [Jobs](components/jobs.md) | Durable background jobs and replayable progress events |
 | [DataForge](components/dataforge.md) | Turns document evidence into datasets for training and evaluation |
