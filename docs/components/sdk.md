@@ -40,6 +40,24 @@ cogni artifact locate <document-id> source-graph
 cogni provenance resolve <document-id> <address-id>
 ```
 
+Structured results remain JSON by default. Add `--human` to an eligible finite
+command for deterministic labelled text, or to `cogni job watch` for readable
+events that are flushed as they arrive. The SDK renders the same already-safe
+result and does not repeat Storage, configuration, network, model, or domain
+work.
+
+The SDK also exposes the bounded Experiments configuration façade:
+
+```bash
+cogni experiment config show
+cogni experiment config show --human
+cogni experiment config validate --storage-config storage.toml
+```
+
+Experiments still owns this resolver. DataForge, Training, Evaluator, and
+Inference remain specialist component CLIs; no matching `cogni` namespaces
+were added.
+
 The SDK validates logical artifact locations but does not replace component
 authorization. Actual artifact-byte reads delegate to Ingest, and provenance
 resolution inherits Source Graph and provenance-address authorization. Physical

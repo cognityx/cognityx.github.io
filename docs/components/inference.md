@@ -8,3 +8,9 @@ Inference serving and model lifecycle capabilities for the platform.
 
 The repository preserves the legacy `llm-benchmark` command and Python package
 as compatibility interfaces.
+
+Finite configuration, server-status, server-watch, and provider results now
+have explicit readable forms where documented. Existing model, discovery, and
+certified-profile commands retain `--format table|detail|json`. Service
+processes, interactive chat, token streams, and `llm-benchmark` remain native
+and are not converted by the new presentation option.
