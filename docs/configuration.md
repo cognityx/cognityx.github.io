@@ -409,7 +409,11 @@ scientific identity, not ambient machine settings:
 - `cognityx-autotune --config PATH` selects a training capacity search.
 - `cognityx-evaluate plan|run --config PATH` selects a saved-output evaluation.
 - `cognityx-track-publication ...` receives explicit publication operands.
-- `llm-benchmark` keeps its existing behavior in this slice.
+- The legacy `llm-benchmark` compatibility command and Python package shipped
+  inside `cognityx-inference` keep their existing interactive/native behavior
+  for backward compatibility. They are not a separate repository or a current
+  first-class platform component, and this compatibility statement does not
+  define the final desired naming architecture.
 - Experiments research YAML, nested component specifications, manifests,
   publication snapshots, model revisions, and result artifacts remain explicit.
 

@@ -58,11 +58,20 @@ machine consumers on those surfaces.
 | `cognityx-train` | Static `config show|validate`; `--human` is an explicit alias for the full run’s existing human format | Full-run default and `--output-format human|json`; `cognityx-autotune` progress controller |
 | `cognityx-evaluate` | Finite `plan`, `run`, `resume`, and `show` results | Evaluation recipes and stored manifest inputs remain explicit |
 | `cognityx-track-publication` | One finite final tracking result | Storage reads and tracker writes are not repeated for presentation |
-| `llm-benchmark` | No change | Interactive legacy benchmark output remains native |
 
 Native Mermaid, Markdown, interactive, silent, service-process, progress, and
 token-stream outputs are not converted into tables merely because `--human`
 exists elsewhere.
+
+### Legacy compatibility interfaces
+
+`llm-benchmark` is a legacy compatibility console entry point and Python
+package shipped inside `cognityx-inference`. It is not a separate Cognityx
+repository or a current first-class platform component. It remains unchanged in
+this rollout because its output is interactive and native, and existing users
+depend on its backward-compatible behavior. This describes the current
+compatibility obligation; it does not make `llm-benchmark` the final desired
+naming architecture.
 
 ## Copy-paste examples
 
