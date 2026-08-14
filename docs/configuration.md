@@ -54,7 +54,7 @@ work and must never be treated as ambient settings.
 | Repository | Persistent settings | Scientific or explicit input | Other classification | Static inspection in this slice |
 | --- | --- | --- | --- | --- |
 | `cognityx-sdk` | Layered Ingest settings | Bounded Inference selection remains explicit | Composes Storage and Resource Context; catalog and Jobs DB are runtime locations | `cogni config show|validate` |
-| `cognityx-experiments` | None | Research YAML and nested component specs | Storage is dependency configuration; results destination is explicit | `cognityx-experiments config show|validate` |
+| `cognityx-experiments` | None | Research YAML and nested component specs | Storage is dependency configuration; results destination is explicit | `cognityx-experiments config show|validate` or `cogni experiment config show|validate` |
 | `cognityx-storage` | One discovered Storage TOML | None | Owner dependency used by other components | Through `cogni ... --component storage` and Python resolver |
 | `cognityx-resource` | One discovered Context JSON plus field/scope overrides | None | Cross-service identity context | Through `cogni ... --component context` and Python resolver |
 | `cognityx-inference` | One discovered Inference TOML | Boundary-search TOML and model revisions | Secrets-file environment value is a safe path override | `cognityx-inference config show|validate` |
@@ -83,6 +83,10 @@ cognityx-experiments config show \
   [--storage-config PATH | --storage-root PATH]
 cognityx-experiments config validate \
   [--storage-config PATH | --storage-root PATH]
+cogni experiment config show \
+  [--storage-config PATH | --storage-root PATH]
+cogni experiment config validate \
+  [--storage-config PATH | --storage-root PATH]
 
 # Persistent Inference settings
 cognityx-inference config show [--config PATH]
@@ -100,6 +104,12 @@ cognityx-evaluator config validate [--judge-config PATH]
 `show` and `validate` use the same resolver as execution. `validate` returns a
 nonzero process status for a missing or malformed explicitly selected file.
 `show` also returns nonzero when it cannot truthfully resolve the selection.
+The `cogni experiment config` forms delegate directly to Experiments and do not
+load the SDK composition root.
+
+These inspection commands keep JSON as their default. Add `--human` for a
+readable view of the same secret-safe report; presentation does not resolve the
+configuration a second time.
 
 ## Selection rules that remain unchanged
 
@@ -399,7 +409,11 @@ scientific identity, not ambient machine settings:
 - `cognityx-autotune --config PATH` selects a training capacity search.
 - `cognityx-evaluate plan|run --config PATH` selects a saved-output evaluation.
 - `cognityx-track-publication ...` receives explicit publication operands.
-- `llm-benchmark` keeps its existing behavior in this slice.
+- The legacy `llm-benchmark` compatibility command and Python package shipped
+  inside `cognityx-inference` keep their existing interactive/native behavior
+  for backward compatibility. They are not a separate repository or a current
+  first-class platform component, and this compatibility statement does not
+  define the final desired naming architecture.
 - Experiments research YAML, nested component specifications, manifests,
   publication snapshots, model revisions, and result artifacts remain explicit.
 

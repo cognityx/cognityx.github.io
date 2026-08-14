@@ -28,6 +28,22 @@ Training workflows, configuration, evaluation, and tuning.
 - [Source repository (access required)](https://github.com/cognityx/cognityx-training)
 - [Request repository access](mailto:bhujay.bhatta@yahoo.com?subject=Access%20request%20for%20cognityx/cognityx-training)
 
+## Cognityx Experiments
+
+Freezes research plans, coordinates owning services, and accumulates reviewable evidence without duplicating their execution logic.
+
+- [Open documentation](/experiments/)
+- [Source repository (access required)](https://github.com/cognityx/cognityx-experiments)
+- [Request repository access](mailto:bhujay.bhatta@yahoo.com?subject=Access%20request%20for%20cognityx/cognityx-experiments)
+
+## Cognityx DataForge
+
+Turns ingested document evidence into datasets for training and evaluation.
+
+- [Open documentation](/dataforge/)
+- [Source repository (access required)](https://github.com/cognityx/cognityx-dataforge)
+- [Request repository access](mailto:bhujay.bhatta@yahoo.com?subject=Access%20request%20for%20cognityx/cognityx-dataforge)
+
 ## Cognityx Storage
 
 Provider-neutral storage operations and local backend boundaries.
@@ -46,7 +62,7 @@ Durable background jobs, ownership boundaries, cancellation, and replayable prog
 
 ## Cognityx Ingest
 
-Canonical, provenance-preserving PDF ingestion artifacts.
+Registers source files, builds document-level pages and artifacts, and hands stable IDs to downstream analysis.
 
 - [Open documentation](/ingest/)
 - [Source repository (access required)](https://github.com/cognityx/cognityx-ingest)
@@ -62,16 +78,24 @@ Shared resource context, execution identity, Context IDs, and portable cross-ser
 
 ## Cognityx Python SDK
 
-The primary application-facing Python SDK and thin Cogni facade.
+Primary SDK and `cogni` CLI for bundles, source files, ingest jobs, and document/artifact inspection.
 
 - [Open documentation](/sdk/)
 - [Source repository (access required)](https://github.com/cognityx/cognityx-sdk)
 - [Request repository access](mailto:bhujay.bhatta@yahoo.com?subject=Access%20request%20for%20cognityx/cognityx-sdk)
 
-## Cognityx Dataforge
+## Cognityx Evaluator
 
-Generated documentation for cognityx-dataforge.
+Generated documentation for cognityx-evaluator.
 
-- [Open documentation](/dataforge/)
-- [Source repository (access required)](https://github.com/cognityx/cognityx-dataforge)
-- [Request repository access](mailto:bhujay.bhatta@yahoo.com?subject=Access%20request%20for%20cognityx/cognityx-dataforge)
+- [Open documentation](/evaluator/)
+- [Source repository (access required)](https://github.com/cognityx/cognityx-evaluator)
+- [Request repository access](mailto:bhujay.bhatta@yahoo.com?subject=Access%20request%20for%20cognityx/cognityx-evaluator)
+
+## Cognityx Observability
+
+Generated documentation for cognityx-observability.
+
+- [Open documentation](/observability/)
+- [Source repository (access required)](https://github.com/cognityx/cognityx-observability)
+- [Request repository access](mailto:bhujay.bhatta@yahoo.com?subject=Access%20request%20for%20cognityx/cognityx-observability)

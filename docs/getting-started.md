@@ -45,6 +45,18 @@ cognityx-inference config validate
 See the [complete command-line map](cli.md) for every implemented form and the
 specialized inputs that deliberately remain explicit.
 
+Structured commands keep JSON as the stable machine result. Add `--human` when
+you want to read that same completed result in the terminal:
+
+```bash
+cogni config show
+cogni config show --human
+cogni experiment config show --human
+```
+
+The readable option changes presentation only. It does not repeat the command
+or automatically activate when a terminal is attached.
+
 ## Minimal working command flow
 
 ```bash
